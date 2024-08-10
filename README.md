@@ -48,11 +48,47 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
      gradle clean
      gradle build
      ```
+## Dependencias, Plugins y Configuración gRPC
 
-2. **Comienza el Desarrollo:**
-   - Una vez que hayas verificado que todo está configurado correctamente, puedes comenzar el desarrollo de tu proyecto.
+Para integrar gRPC en tu proyecto, sigue estos pasos:
+
+### 1. Agregar el Plugin de Protobuf
+
+En tu archivo `build.gradle`, añade el plugin que se muestra en la siguiente imagen:
+
+![Plugin Protobuf](images/plugin.png)
+
+### 2. Incluir las Dependencias Necesarias
+
+Añade las dependencias necesarias en la sección `dependencies` de tu archivo `build.gradle`, como se muestra en la imagen a continuación:
+
+![Dependencias gRPC](images/dependencias.png)
+
+### 3. Configurar Protocolo Buffer (Protobuf)
+
+Configura Protobuf en tu `build.gradle` para generar código Java a partir de archivos `.proto`. La configuración se muestra en la siguiente imagen:
+
+![Configuración Protobuf](images/protobuf.png)
+
+### 4. Especificar Directorios para Archivos Generados
+
+Define dónde se guardarán los archivos generados por Protobuf. Puedes ver esta configuración en la imagen:
+
+![Directorios Protobuf](images/directorio.png)
+
+### 5. Compilar y Verificar
+
+Finalmente, ejecuta los siguientes comandos para limpiar y compilar el proyecto, asegurándote de que todo funcione correctamente:
+
+```bash
+gradle clean
+gradle build
+```
+
 
 ## Recursos Adicionales
 
 - [Documentación de Gradle](https://docs.gradle.org/current/userguide/userguide.html)
 - [Documentación de Spring Boot](https://spring.io/projects/spring-boot)
+- [Documentación de gRPC](https://grpc.io/docs/)
+- [Documentación de Protobuf](https://developers.google.com/protocol-buffers/docs/overview)
