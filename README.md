@@ -1,5 +1,8 @@
-# Configuración completa
+# Configuración completa - server
 
+> **Nota:** Esta guía está centrada en la configuración del servidor. El proyecto demuestra cómo implementar y utilizar gRPC en Java 22 con Spring Boot y MySQL como base de datos, usando Gradle como herramienta de construcción. Además, para realizar pruebas, se empleará el software BloomRPC [que emula el cliente gRPC].
+
+> 
 # Índice
 
 1. [Requisitos](#requisitos)
@@ -21,10 +24,11 @@
 
 ## 1 - Requisitos
 
-Antes de comenzar, asegúrate de tener instalados los siguientes programas:
-
 - [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
+- [BloomRPC](https://github.com/bloomrpc/bloomrpc) (para emular el cliente gRPC)
+- [Java 22](https://www.oracle.com/java/technologies/javase-downloads.html) (o una versión compatible)
+- [Gradle](https://gradle.org/install/) (para la construcción del proyecto)
 
 ## 2 - Configuración de la Base de Datos
 
@@ -57,9 +61,7 @@ Antes de comenzar, asegúrate de tener instalados los siguientes programas:
      gradle -version
      ```
    - Deberías ver la versión de Gradle instalada si todo está configurado correctamente.
-
-## Verificación del Proyecto
-
+     
 3.5. **Verifica la Configuración del Proyecto:**
    - Abre una consola en el directorio raíz del proyecto.
    - Ejecuta los siguientes comandos para limpiar y construir el proyecto:
